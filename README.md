@@ -3,7 +3,7 @@ Proyecto de intercambio de idioma con la finalidad de mejorar la confianza del u
 
 # Indicaciones
 Deben instalar sus entorno virtual y instalar los paquetes del requirements.txt
-
+```
 my_project/
 │
 ├── app/
@@ -41,3 +41,4 @@ my_project/
 ├── requirements.txt  # Lista de dependencias del proyecto (generada con pip freeze)
 ├── config.py  # Archivo de configuración del proyecto
 └── run.py  # Archivo principal para ejecutar la aplicación Flask
+```
