@@ -1,11 +1,12 @@
 /* Estilos personalizados para la página de inicio */
 
 body {
-    background-color: #f8f9fa;
+    background-color: #f2f2f2; /* Cambio de color a un gris claro */
 }
 
 .navbar-brand {
     font-size: 24px;
+    color: #FF6F61; /* Color Rosa Miami */
 }
 
 .navbar-nav .nav-link {
@@ -14,18 +15,19 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #FFFFFF; /* Blanco */
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #007bff;
+    color: #007bff; /* Azul Turquesa */
     margin-bottom: 20px;
 }
 
 .lead {
     font-size: 18px;
     line-height: 1.6;
+    color: #0056b3; /* Azul Oscuro */
 }

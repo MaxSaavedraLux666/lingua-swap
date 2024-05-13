@@ -1,15 +1,32 @@
-"""login.py"""
-from flask import Blueprint, render_template, redirect, url_for
+from flask import Flask, render_template
+from login import login_bp
 
-login_bp = Blueprint('login', __name__)
+app = Flask(__name__)
+# app.register_blueprint(login_bp, url_prefix='/auth')  # Prefijo para las rutas de autenticación
+# Prefijo para las rutas de autenticación
+app.register_blueprint(login_bp, url_prefix='/auth')
+
+# Ruta para la página principal
 
 
-@login_bp.route('/login', methods=['GET', 'POST'])
-def login():
-    # Lógica de autenticación y redirección si es exitoso
-    return redirect(url_for('login.error_page'))
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+# Ruta para la página de registro
 
 
-@login_bp.route('/error.html')
-def error_page():
-    return render_template('login.html')
+@app.route('/registro')
+def register():
+    return render_template('register.html')
+
+# Ruta para la página de registro exitoso
+
+
+@app.route('/registro_exitoso')
+def registration_success():
+    return render_template('registro_exitoso.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

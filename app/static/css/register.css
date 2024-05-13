@@ -2,14 +2,14 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* Color de fondo gris claro */
 }
 
 .container {
   width: 80%;
   max-width: 600px;
   margin: 50px auto;
-  background-color: #fff;
+  background-color: #FFFFFF; /* Blanco */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -28,6 +28,7 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+  color: #FF6F61; /* Rosa Miami */
 }
 
 input[type="text"],
@@ -46,7 +47,7 @@ select {
 
 button {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #FFD700; /* Amarillo Claro */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -54,5 +55,5 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #00CED1; /* Azul Turquesa */
 }
