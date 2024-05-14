@@ -33,5 +33,13 @@ def contact():
     """
     return render_template('contact.html')
 
+
+@app.route('/video')
+def video():
+    """
+    Página de listado de temas
+    """
+    return render_template('video.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

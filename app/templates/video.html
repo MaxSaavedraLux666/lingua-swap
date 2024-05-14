@@ -1,31 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/video.css') }}"
-    />
-    <title>Videollamada</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>Videollamada</h1>
-        <div class="user-info">
-          <img src="{{ url_for('static', filename='img/cat.png') }}" alt="Avatar" class="avatar" />
-          <span class="username">Nombre de Usuario</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call Interface</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- CSS FILES -->        
+    <link rel="preconnect" href="{{ url_for('static', filename='https://fonts.googleapis.com')}}">
+    <link rel="preconnect" href="{{ url_for('static', filename='https://fonts.gstatic.com')}}" crossorigin>
+    <link href="{{ url_for('static', filename='https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css')}}" rel="stylesheet">
+</head>
+<body class="video-call_body" id="top">
+    <main>
+
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi-back"></i>
+                <span>Topic</span>
+            </a>
+
+            <div class="d-lg-none ms-auto me-4">
+                <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_1">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_2">Browse Topics</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_3">How it works</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_4">FAQs</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{{ url_for('topics_listing') }}">Topics Listing</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('contact') }}">Contact Form</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('video') }}">Video Call</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="d-none d-lg-block">
+                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="video-container">
-        <video id="local-video" autoplay muted></video>
-        <video id="remote-video" autoplay></video>
-      </div>
-      <div class="controls">
-        <button id="start-call">Iniciar Llamada</button>
-        <button id="end-call">Finalizar Llamada</button>
-      </div>
-    </div>
-  </body>
+      </nav>
+
+      <header class="site-header d-flex flex-column justify-content-center align-items-center">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+            </div>
+        </div>
+      </header>
+
+      <section class="section-padding section-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+
+              <div class="video-call">
+                  <div class="video-container">
+                    <!-- Video call area -->
+                    <video id="video-call" autoplay muted>
+                      <!-- Aquí se mostrará el video -->
+                    </video>
+                    <div class="controls">
+                      <!-- User controls -->
+                      <button type="submit" class="form-control" id="mute-button">Mute</button>
+                      <button type="submit" class="form-control" id="camera-button">Camera On/Off</button>
+                      <button type="submit" class="form-control" id="end-call-button">End Call</button>
+                  </div>
+                  </div>
+                  
+              </div>
+              <div class="chat-container">
+                <!-- Chat window -->
+                <div class="chat-messages">
+                  <!-- Aquí se mostrarán los mensajes del chat -->
+                </div>
+                <textarea class="contact-form" id="chat-input" placeholder="Type your message..."></textarea>
+                <button type="submit" id="send-button">Send</button>
+            </div>
+            </div>
+        </div>
+      </section>
+
+    </main>
+    <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js')}}"></script>
+    <script src="scripts.js"></script>
+</body>
 </html>
+

@@ -1153,3 +1153,73 @@ blockquote {
   }
 }
 
+/* Styles for video call interface */
+
+.video-call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff; /* Color de fondo para la sección de videollamada */
+  padding: 50px 0;
+}
+
+.video-container {
+  width: 70%;
+  height: 60%;
+  background-color: #00BFA6; /* Color de fondo para el área de video */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.chat-container {
+  width: 70%;
+  height: 20%;
+  background-color: #0d5acc; /* Color de fondo para el área de chat */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(39, 118, 138, 0.1);
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.controls {
+  width: 50%;
+  height: 10%;
+  background-color: #4900bf; /* Color de fondo para los controles del usuario */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  bottom: 0;
+  left: 0;
+}
+
+
+/* Estilos para los elementos del chat */
+.chat-messages {
+  height: calc(100% - 40px);
+  margin-bottom: 10px;
+}
+
+.chat-input {
+  width: calc(100% - 80px);
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.send-button {
+  background-color: #13836b; /* Color de fondo para el botón de enviar */
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #80d0c7; /* Color de fondo al pasar el ratón sobre el botón de enviar */
+}
