@@ -26,6 +26,13 @@ def topics_listing():
     """
     return render_template('topics-listing.html')
 
+@app.route('/shop')
+def shop():
+    """
+    ------------------
+    """
+    return render_template('shop.html')
+
 @app.route('/contact')
 def contact():
     """
