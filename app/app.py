@@ -19,12 +19,12 @@ def index():
     """
     return render_template('index.html')
 
-@app.route('/topics-listing')
-def topics_listing():
+@app.route('/login')
+def login():
     """
     Página de listado de temas
     """
-    return render_template('topics-listing.html')
+    return render_template('login.html')
 
 @app.route('/shop')
 def shop():
