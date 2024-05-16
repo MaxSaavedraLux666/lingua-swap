@@ -26,19 +26,19 @@ def login():
     """
     return render_template('login.html')
 
-@app.route('/shop')
-def shop():
+@app.route('/main')
+def main():
     """
     ------------------
     """
-    return render_template('shop.html')
+    return render_template('main.html')
 
-@app.route('/contact')
-def contact():
+@app.route('/chat')
+def chat():
     """
     Página de listado de temas
     """
-    return render_template('contact.html')
+    return render_template('chat.html')
 
 
 @app.route('/video')
